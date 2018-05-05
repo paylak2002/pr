@@ -1,7 +1,6 @@
-class kaycak {
+class kaycak extends Kendani{
 	constructor(x, y, index) {
-		this.x = x;
-		this.y = y;
+		super(x,y);
 		this.i = index;
 	}
 	cord() {
@@ -18,17 +17,7 @@ class kaycak {
 	}
 	yntrelVandak(ch) {
 		this.cord();
-		var found = [];
-		for (var i in this.directions) {
-			var x = this.directions[i][0];
-			var y = this.directions[i][1];
-			if (x >= 0 && x < matrix[0].length && y >= 0 && y < matrix.length) {
-				if (matrix[y][x] == ch) {
-					found.push(this.directions[i]);
-				}
-			}
-		}
-		return found;
+		return super.yntrelVandak(ch);
 	}
 	move() {
 		if (random(this.yntrelVandak(0))) {
@@ -49,6 +38,7 @@ class kaycak {
 					for (var k in xoter) {
 						if (xoter[k].x == i && xoter[k].y == this.y) {
 							xoter.splice(k, 1);
+							break;
 						}
 					}
 				}
@@ -57,6 +47,7 @@ class kaycak {
 					for (var k in kover) {
 						if (kover[k].x == i && kover[k].y == this.y) {
 							kover.splice(k, 1);
+							break;
 						}
 					}
 				}
@@ -65,6 +56,7 @@ class kaycak {
 					for (var k in gishatichner) {
 						if (gishatichner[k].x == i && gishatichner[k].y == this.y) {
 							gishatichner.splice(k, 1);
+							break;
 						}
 					}
 				}
@@ -73,6 +65,7 @@ class kaycak {
 					for (var k in hakakaycakner) {
 						if (hakakaycakner[k].x == i && hakakaycakner[k].y == this.y) {
 							hakakaycakner.splice(k, 1);
+							break;
 						}
 					}
 				}
@@ -85,6 +78,7 @@ class kaycak {
 					for (var k in xoter) {
 						if (xoter[k].y == i && xoter[k].x == this.x) {
 							xoter.splice(k, 1);
+							break;
 						}
 					}
 				}
@@ -93,6 +87,7 @@ class kaycak {
 					for (var k in kover) {
 						if (kover[k].y == i && kover[k].x == this.x) {
 							kover.splice(k, 1);
+							break;
 						}
 					}
 				}
@@ -101,6 +96,7 @@ class kaycak {
 					for (var k in gishatich) {
 						if (gishatich[k].y == i && gishatich[k].x == this.x) {
 							gishatich.splice(k, 1);
+							break;
 						}
 					}
 				}
@@ -109,6 +105,7 @@ class kaycak {
 					for (var k in hakakaycakner) {
 						if (hakakaycakner[k].y == i && hakakaycakner[k].x == this.x) {
 							hakakaycakner.splice(k, 1);
+							break;
 						}
 					}
 				}
