@@ -1,6 +1,6 @@
-class xot extends Kendani{
+class xot extends Kendani {
 	constructor(x, y) {
-		super(x,y);
+		super(x, y);
 		this.directions = [
 			[this.x - 1, this.y - 1],
 			[this.x, this.y - 1],

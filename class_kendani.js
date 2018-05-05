@@ -1,9 +1,9 @@
 class Kendani {
-    constructor(x,y){
-        this.x = x;
-        this.y = y;
-    }
-    yntrelVandak(ch) {
+	constructor(x, y) {
+		this.x = x;
+		this.y = y;
+	}
+	yntrelVandak(ch) {
 		var found = [];
 		for (var i in this.directions) {
 			var x = this.directions[i][0];

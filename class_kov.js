@@ -1,6 +1,6 @@
-class kov extends Kendani{
+class kov extends Kendani {
 	constructor(x, y, i) {
-		super(x,y);
+		super(x, y);
 		this.e = 5;
 		this.b = 0;
 		this.index = i;

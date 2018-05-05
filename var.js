@@ -29,12 +29,10 @@ for (var i = 0; i < Y; i++) {
 	matrix.push([]);
 	for (var j = 0; j < X; j++) {
 		var rand = Math.floor(Math.random() * 6);
-		if(rand != 4)
-		{
+		if (rand != 4) {
 			matrix[i].push(rand);
 		}
-		else 
-		{
+		else {
 			matrix[i].push(0);
 		}
 	}

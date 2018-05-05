@@ -1,4 +1,4 @@
-class hakaK extends Kendani{
+class hakaK extends Kendani {
 	cord() {
 		this.directions = [
 			[this.x - 1, this.y - 1],

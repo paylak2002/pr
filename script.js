@@ -2,7 +2,7 @@
 for (var i = 0; i < matrix.length; ++i) {
 	for (var j = 0; j < matrix[i].length; ++j) {
 		if (matrix[i][j] == 5) {
-			hakakaycakner.push(new hakaK(j, i,hakakaycakner.length));
+			hakakaycakner.push(new hakaK(j, i, hakakaycakner.length));
 		}
 	}
 }
@@ -10,7 +10,7 @@ for (var i = 0; i < matrix.length; ++i) {
 for (var i = 0; i < matrix.length; ++i) {
 	for (var j = 0; j < matrix[i].length; ++j) {
 		if (matrix[i][j] == 4) {
-			kaycakner.push(new kaycak(j, i,kaycakner.length));
+			kaycakner.push(new kaycak(j, i, kaycakner.length));
 		}
 	}
 }
@@ -51,12 +51,10 @@ function setup() {
 }
 
 function draw() {
-	if(bool == true)
-	{
+	if (bool == true) {
 		audio.play();
 	}
-	else 
-	{
+	else {
 		audioKami.play();
 	}
 	frameRate(10);
@@ -65,45 +63,39 @@ function draw() {
 	multiply2++;
 	multiply3++;
 	/////////////////////////kaycakneri verakendanacman hamar///////////////////////////
-	var arrR = [[0,0],[matrix[0].length - 1,matrix.length - 1]];
+	var arrR = [[0, 0], [matrix[0].length - 1, matrix.length - 1]];
 	var rXY = random(arrR);
-	if(kover.length != 0 && gishatichner.length != 0)
-	{
-		if(kaycakner.length == 0)
-		{
-			if(matrix[rXY[1]][rXY[0]] == 1)
-			{
+	if (kover.length != 0 && gishatichner.length != 0) {
+		if (kaycakner.length == 0) {
+			if (matrix[rXY[1]][rXY[0]] == 1) {
 				for (var k in xoter) {
 					if (xoter[k].x == rXY[0] && xoter[k].y == rXY[1]) {
 						xoter.splice(k, 1);
 					}
 				}
 			}
-			else if(matrix[rXY[1]][rXY[0]] == 2)
-			{
+			else if (matrix[rXY[1]][rXY[0]] == 2) {
 				for (var k in kover) {
 					if (kover[k].x == rXY[0] && kover[k].y == rXY[1]) {
 						kover.splice(k, 1);
 					}
 				}
 			}
-			else if(matrix[rXY[1]][rXY[0]] == 3)
-			{
+			else if (matrix[rXY[1]][rXY[0]] == 3) {
 				for (var k in gishatichner) {
 					if (gishatichner[k].x == rXY[0] && gishatichner[k].y == rXY[1]) {
 						gishatichner.splice(k, 1);
 					}
 				}
 			}
-			else if(matrix[rXY[1]][rXY[0]] == 5)
-			{
+			else if (matrix[rXY[1]][rXY[0]] == 5) {
 				for (var k in hakakaycakner) {
 					if (hakakaycakner[k].x == rXY[0] && hakakaycakner[k].y == rXY[1]) {
 						hakakaycakner.splice(k, 1);
 					}
 				}
 			}
-			kaycakner.push(new kaycak(rXY[0],rXY[1],kaycakner.length));
+			kaycakner.push(new kaycak(rXY[0], rXY[1], kaycakner.length));
 			matrix[rXY[1]][rXY[0]] = 4;
 		}
 	}
@@ -154,16 +146,13 @@ function draw() {
 		}
 		multiply1 = 0;
 	}
-	if(multiply3 >= 4)
-	{
-		for(var i in kaycakner)
-		{
+	if (multiply3 >= 4) {
+		for (var i in kaycakner) {
 			kaycakner[i].move();
 			kaycakner[i].krakel();
 			kaycakner[i].die();
 		}
-		for(var i in hakakaycakner)
-		{
+		for (var i in hakakaycakner) {
 			hakakaycakner[i].voronum();
 		}
 		multiply3 = 0;

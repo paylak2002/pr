@@ -1,6 +1,6 @@
-class kaycak extends Kendani{
+class kaycak extends Kendani {
 	constructor(x, y, index) {
-		super(x,y);
+		super(x, y);
 		this.i = index;
 	}
 	cord() {
@@ -42,8 +42,7 @@ class kaycak extends Kendani{
 						}
 					}
 				}
-				else if(matrix[this.y][i] == 2)
-				{
+				else if (matrix[this.y][i] == 2) {
 					for (var k in kover) {
 						if (kover[k].x == i && kover[k].y == this.y) {
 							kover.splice(k, 1);
@@ -51,8 +50,7 @@ class kaycak extends Kendani{
 						}
 					}
 				}
-				else if(matrix[this.y][i] == 3)
-				{
+				else if (matrix[this.y][i] == 3) {
 					for (var k in gishatichner) {
 						if (gishatichner[k].x == i && gishatichner[k].y == this.y) {
 							gishatichner.splice(k, 1);
@@ -60,8 +58,7 @@ class kaycak extends Kendani{
 						}
 					}
 				}
-				else if(matrix[this.y][i] == 5)
-				{
+				else if (matrix[this.y][i] == 5) {
 					for (var k in hakakaycakner) {
 						if (hakakaycakner[k].x == i && hakakaycakner[k].y == this.y) {
 							hakakaycakner.splice(k, 1);
@@ -82,8 +79,7 @@ class kaycak extends Kendani{
 						}
 					}
 				}
-				else if(matrix[i][this.x] == 2)
-				{
+				else if (matrix[i][this.x] == 2) {
 					for (var k in kover) {
 						if (kover[k].y == i && kover[k].x == this.x) {
 							kover.splice(k, 1);
@@ -91,8 +87,7 @@ class kaycak extends Kendani{
 						}
 					}
 				}
-				else if(matrix[i][this.x] == 3)
-				{
+				else if (matrix[i][this.x] == 3) {
 					for (var k in gishatich) {
 						if (gishatich[k].y == i && gishatich[k].x == this.x) {
 							gishatich.splice(k, 1);
@@ -100,8 +95,7 @@ class kaycak extends Kendani{
 						}
 					}
 				}
-				else if(matrix[i][this.x] == 5)
-				{
+				else if (matrix[i][this.x] == 5) {
 					for (var k in hakakaycakner) {
 						if (hakakaycakner[k].y == i && hakakaycakner[k].x == this.x) {
 							hakakaycakner.splice(k, 1);

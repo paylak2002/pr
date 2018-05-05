@@ -1,6 +1,6 @@
-class gishatich extends Kendani{
+class gishatich extends Kendani {
 	constructor(x, y, i) {
-		super(x,y);
+		super(x, y);
 		this.e = 20;
 		this.b = 0;
 		this.index = i;
