@@ -5,18 +5,6 @@ class kov extends Kendani {
 		this.b = 0;
 		this.index = i;
 	}
-	cord() {
-		this.directions = [
-			[this.x - 1, this.y - 1],
-			[this.x, this.y - 1],
-			[this.x + 1, this.y - 1],
-			[this.x - 1, this.y],
-			[this.x + 1, this.y],
-			[this.x - 1, this.y + 1],
-			[this.x, this.y + 1],
-			[this.x + 1, this.y + 1]
-		];
-	}
 	yntrelVandak(ch) {
 		this.cord();
 		return super.yntrelVandak(ch);
@@ -26,7 +14,6 @@ class kov extends Kendani {
 			if (kover[i].x == this.x && kover[i].y == this.y) {
 				kover.splice(i, 1);
 				matrix[this.y][this.x] = 0;
-				break;
 			}
 		}
 	}
@@ -37,7 +24,6 @@ class kov extends Kendani {
 			for (var i in xoter) {
 				if (xoter[i].x == ran[0] && xoter[i].y == ran[1]) {
 					xoter.splice(i, 1);
-					break;
 				}
 			}
 			this.e = 8;

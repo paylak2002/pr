@@ -5,18 +5,6 @@ class gishatich extends Kendani {
 		this.b = 0;
 		this.index = i;
 	}
-	cord() {
-		this.directions = [
-			[this.x - 1, this.y - 1],
-			[this.x, this.y - 1],
-			[this.x + 1, this.y - 1],
-			[this.x - 1, this.y],
-			[this.x + 1, this.y],
-			[this.x - 1, this.y + 1],
-			[this.x, this.y + 1],
-			[this.x + 1, this.y + 1]
-		];
-	}
 	yntrelVandak(ch) {
 		this.cord();
 		return super.yntrelVandak(ch);
@@ -26,7 +14,6 @@ class gishatich extends Kendani {
 			if (gishatichner[i].x == this.x && gishatichner[i].y == this.y) {
 				gishatichner.splice(i, 1);
 				matrix[this.y][this.x] = 0;
-				break;
 			}
 		}
 	}
@@ -37,7 +24,6 @@ class gishatich extends Kendani {
 			for (var i in kover) {
 				if (kover[i].x == ran[0] && kover[i].y == ran[1]) {
 					kover.splice(i, 1);
-					break;
 				}
 			}
 			matrix[ran[1]][ran[0]] = 3;
