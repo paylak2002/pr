@@ -14,6 +14,7 @@ class kov extends Kendani {
 			if (kover[i].x == this.x && kover[i].y == this.y) {
 				kover.splice(i, 1);
 				matrix[this.y][this.x] = 0;
+				break;
 			}
 		}
 	}
